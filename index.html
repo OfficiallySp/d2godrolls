@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>God Roll Armory — Destiny 2 Weapon Rolls</title>
+<meta name="description" content="Curated god rolls for Destiny 2's best weapons — PvE and PvP, raid to Trials.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect x='4' y='4' width='8' height='8' transform='rotate(45 8 8)' fill='%23d7b356'/></svg>">
+</head>
+<body data-mode="pve">
+
+<header class="site-head">
+  <div class="head-inner">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <div>
+        <p class="eyebrow">Destiny 2 &middot; Curated weapon intel</p>
+        <h1>God Roll Armory</h1>
+      </div>
+    </div>
+    <div class="head-controls">
+      <div class="seg" role="group" aria-label="Activity mode">
+        <button type="button" class="seg-btn" data-mode-btn="pve" aria-pressed="true">PvE</button>
+        <button type="button" class="seg-btn" data-mode-btn="pvp" aria-pressed="false">PvP</button>
+      </div>
+      <input type="search" id="search" placeholder="Search weapons or perks&hellip;" aria-label="Search weapons or perks">
+    </div>
+  </div>
+  <div class="spectrum" aria-hidden="true"></div>
+</header>
+
+<nav class="filters" aria-label="Weapon filters">
+  <div class="filter-row" id="type-chips" role="group" aria-label="Filter by weapon type"></div>
+  <div class="filter-row filter-row-2">
+    <div class="elem-chips" id="elem-chips" role="group" aria-label="Filter by damage type"></div>
+    <div class="selects">
+      <label class="sel">
+        <span>Source</span>
+        <select id="source-select">
+          <option value="all">All sources</option>
+          <option value="raid">Raid</option>
+          <option value="dungeon">Dungeon</option>
+          <option value="nightfall">Nightfall</option>
+          <option value="trials">Trials</option>
+          <option value="crucible">Crucible</option>
+          <option value="world">World &amp; Seasonal</option>
+          <option value="exotic">Exotic</option>
+        </select>
+      </label>
+      <label class="sel">
+        <span>Sort</span>
+        <select id="sort-select">
+          <option value="tier">Tier</option>
+          <option value="name">Name</option>
+          <option value="type">Type</option>
+        </select>
+      </label>
+      <button type="button" id="reset-btn" class="reset">Clear filters</button>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <p class="result-line" id="result-line" role="status"></p>
+  <section class="grid" id="grid" aria-live="polite"></section>
+  <div class="empty" id="empty" hidden>
+    <p class="empty-title">Nothing in the vault matches.</p>
+    <p>Loosen a filter or clear them all to see every weapon.</p>
+    <button type="button" class="reset" data-reset>Clear filters</button>
+  </div>
+</main>
+
+<footer class="site-foot">
+  <p>A curated snapshot of community-consensus rolls. Perk pools and the meta shift with every
+  sandbox patch &mdash; cross-check on <a href="https://www.light.gg" target="_blank" rel="noopener">light.gg</a>
+  before you shard anything. Exotics have fixed perks unless noted.</p>
+  <p>Add or edit weapons in <code>js/data.js</code>. Not affiliated with Bungie; Destiny and its
+  weapon and perk names are trademarks of Bungie, Inc.</p>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
