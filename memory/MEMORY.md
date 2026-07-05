@@ -1,0 +1,1 @@
+- [Destiny 2 final meta](destiny2-final-meta.md) — game's last update shipped; god-roll meta is frozen, so the site frames rolls as permanent
